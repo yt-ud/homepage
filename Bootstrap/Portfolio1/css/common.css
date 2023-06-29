@@ -1,8 +1,21 @@
 @charset "UTF-8";
 
+    body {
+        width: 100%;
+    }
+    
+    main {
+        margin: auto;
+    }
+
     footer {
-        position: absolute;
-        bottom: 0px;        
+        position: absolute;/*②絶対位置*/
+        bottom: 0; /*下に固定*/
+    }
+
+    .wrapper {
+        min-height: 100vh;/*①高さの最小値*/
+        position: relative;/*②相対位置*/
     }
 
     .copywright {
@@ -12,3 +25,8 @@
     .h100px {
         height: 100px;
     }
+
+    .w-40 {
+        width: 40%;
+    }
+
