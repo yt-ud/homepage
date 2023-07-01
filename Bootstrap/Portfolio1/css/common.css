@@ -23,11 +23,8 @@
     }
 
     .mt50px {
+        margin: auto;
         margin-top: 50px;
-    }
-
-    .mt70px {
-        margin-top: 70px;
     }
 
     .w-40 {
