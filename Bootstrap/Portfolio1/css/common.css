@@ -22,11 +22,14 @@
         text-align: center;
     }
 
-    .h100px {
-        height: 100px;
+    .mt50px {
+        margin-top: 50px;
+    }
+
+    .mt70px {
+        margin-top: 70px;
     }
 
     .w-40 {
         width: 40%;
     }
-
