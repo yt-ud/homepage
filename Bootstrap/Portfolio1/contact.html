@@ -24,6 +24,9 @@
                             <li class="nav-item">
                                 <a class="nav-link text-white" href="jigyou.html">事業内容</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="access.html">ニュース</a>
+                            </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link text-white dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">代表及び役員</a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -50,7 +53,7 @@
             </nav>
 
             <!-- メイン -->
-            <form class="w-40 mt50px">
+            <form class="w-40 mt50px" action="mailer.php" method="post" onSubmit="return check()">
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">名前</label>
                     <input type="text" class="form-control">
@@ -67,11 +70,7 @@
                     <label for="exampleInputPassword1" class="form-label">内容</label>
                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
                 </div>
-                <div class="mb-3 form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary">送信</button>
             </form>
             </div>
          
@@ -80,6 +79,7 @@
                 <p class="text-body-secondary fw-bold ">&COPY; 株式会社テストサイト</p>
             </footer>
             </div>
+
             <script async src="https://cdn.jsdelivr.net/npm/es-module-shims@1/dist/es-module-shims.min.js" crossorigin="anonymous"></script>
             <script type="importmap">
             {
@@ -94,6 +94,17 @@
         
                 new bootstrap.Popover(document.getElementById('popoverButton'))
             </script> 
+            <script>
+                function check(){
+                    if(window.confirm('送信してよろしいですか？')){ // 確認ダイアログを表示            
+                        return true; // 「OK」時は送信を実行
+                    }
+                        else{ // 「キャンセル」時の処理            
+                        window.alert('キャンセルされました'); // 警告ダイアログを表示
+                        return false; // 送信を中止
+                    }            
+                }
+            </script>
         </body>
     </html>
 
